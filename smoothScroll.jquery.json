@@ -1,0 +1,27 @@
+{
+  "name"        : "smoothScroll",
+  "version"     : "1.0.0",
+  "title"       : "jQuery smooth scrollbar",
+  "description" : "smoothScroll is a light, powerful and crossbrowser way to replace the browser vertical scrollbar by a slim and customizable scrollbar.",
+  "keywords"    : ["scrollbar", "scroll", "smoothscroll", "scrollable", "scrolling"],
+  "demo"        : "http://adamsantoro.fr/projects/smoothScoll",
+  "homepage"    : "http://adamsantoro.fr/projects/smoothScoll",
+  "download"    : "http://adamsantoro.fr/projects/smoothScoll",
+
+  "author" : {
+    "name"  : "Adam Santoro",
+    "email" : "hi@adamsantoro.fr",
+    "url"   : "http://adamsantoro.fr/"
+  },
+
+  "dependencies" : {
+    "jquery" : ">= 1.6"
+  },
+
+  "licenses" : [
+    {
+      "type": "GPL",
+      "url": "http://www.opensource.org/licenses/gpl-license.php"
+    }
+  ]
+}

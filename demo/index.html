@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html  lang="fr">
+<head>
+    
+    <title>smoothScroll, un plugin jQuery léger, puissant et cross-browser</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link type="text/css" rel="stylesheet" media="screen, tv, projection" href="style.css" />
+    <link rel="icon" href="../favicon.png" type="image/png" />
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="smoothScroll-1.0.min.js"></script>
+	
+	<!--[if lte IE 9]>
+    <link type="text/css" rel="stylesheet" media="screen, tv, projection" href="styleie8.css" />
+    <![endif]-->
+	
+</head>
+
+<body>
+    
+    <div id="bg"></div>
+    
+    <div id="main">
+        
+        <div id="header"> 
+            
+            <a href="smoothScroll-1.0.js" class="download" target="_blank">
+                
+                <h1>Télécharger</h1>
+                
+                <p>Version de développement (17ko)</p>
+                
+            </a>
+            
+            <div id="title">
+                
+                <h1>smoothScroll <span>v1.0</span></h1>
+                
+            </div>
+            
+            <a href="smoothScroll-1.0.min.js" class="download"  target="_blank">
+                
+                <h1>Télécharger</h1>
+                
+                <p>Dernière version min (4ko)</p>
+                
+            </a>
+            
+            <div class="clear"></div>
+            
+        </div>
+        
+        
+        <div id="content">
+        
+            <p class="about">smoothScroll est un plug-in jQuery dont le but est de remplacer la barre de scroll 
+            par défaut du navigateur par une barre plus esthétique et personnalisable à souhait
+            en css. Simple d’utilisation et pensée pour vous fournir un paramètrage avancée,
+            elle a l’avantage d’offrir le même rendu sur tous les systèmes d’exploitation.</p>
+            
+            <div class="pics">
+                
+                <div id="cloud">
+                    
+                    <p>Légère</p>
+                    
+                </div>
+                
+                <div id="power">
+                    
+                    <p>Puissante</p>
+                    
+                </div>
+                
+                <div id="crossbro">
+                    
+                    <p>Cross Browser</p>
+                    
+                </div>
+                
+                <div class="clear"></div>
+                
+            </div>
+            
+            <div id="exemple" class="el">
+                
+                <h1 class="title">Exemple</h1>
+                
+                <p>Vous pouvez voir un exemple directement sur cette page, en scrollant dans la page. La barre de scroll 
+                remplace la barre habituelle de votre navigateur.</p>
+                
+            </div>
+            
+            <div id="util" class="el">
+                
+                <h1 class="title">Utilisation</h1>
+                
+                <p>Comment utiliser le plug-in ? Tout d’abord :</p>
+                
+                <ul>
+                    
+                    <li>Récupérez la dernière version stable de jQuery ici et joignez-la à votre projet</li>
+                    <li>Télécharger la dernière version stable ici, en haut à gauche</li>
+                    <li>Joignez le au <span class="blue">&lsaquo;head&rsaquo;</span> votre page html comme ceci (par exemple) :</li>
+                    
+                </ul>
+                
+                <p class="shell">
+                        
+                    <span class="blue">&lsaquo;script</span> <span class="red">type=</span><span class="yellow">"text/javascript"</span> <span class="red">src=</span><span class="yellow">"js/smoothScroll-1.0.js"</span><span class="blue">&rsaquo;&lsaquo;/script&rsaquo;</span>
+
+                </p>
+                
+                <ul>
+                    
+                    <li>Une fois ceci fait, pour initialiser le plug-in, ajoutez ce code (toujours dans le <span class="blue">&lsaquo;head&rsaquo;</span>)</li>
+                    
+                </ul>
+                
+                <div class="shell">
+                    
+                    <span class="blue">&lsaquo;script</span> <span class="red">type=</span><span class="yellow">"text/javascript"</span> <span class="red">src=</span><span class="yellow">"js/smoothScroll-1.0.js"</span><span class="blue">&rsaquo;</span><br/>
+
+                    <p>$(<span class="red">document</span>).load(<span class="blue">function</span>() {<br/>
+
+                        <span class="indent">$(<span class="red">window</span>).smoothScroll({ param1: <span class="yellow">value1</span>, param2: <span class="yellow">value2</span> });</span><br/>
+
+                    });</p>
+
+                    <span class="blue">&lsaquo;/script&rsaquo;</span>
+                    
+                </div>
+                
+                <ul>
+                    
+                    <li>Et c’est tout !</li>
+                    
+                </ul>
+                
+            </div>
+            
+             <div id="param" class="el">
+                
+                <h1 class="title">Paramètres</h1>
+                
+                <div class="param">
+                    
+                    theme<br/>
+                        
+                        <p>Ce paramètre permet de modifier rapidement et simplement l’apparence de la barre.<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>dark : Sélectionner le thème dark</li>
+                                <li>light : Sélectionner le thème light</li>
+                                
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> dark</p>
+                    
+                </div>
+                
+    
+                <div class="param">
+                    
+                    autoHide<br/>
+                        
+                        <p>Ce paramètre permet de masquer automatiquement la barre lorsqu’elle est inactive.<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>true : Masque la barre</li>
+                                <li>false : Désactive cette option</li>
+                                
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> false</p>
+                    
+                </div>
+                
+                
+                <div class="param">
+                    
+                    opacity<br/>
+                        
+                        <p>Ce paramètre permet de modifier la transparence de la barre.<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>un chiffre de type 0, 1 ou 0,x entre 0 et 1</li>
+                                
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> 0.6</p>
+                    
+                </div>
+                
+                
+                <div class="param">
+                    
+                    scrollSpeed<br/>
+                        
+                        <p>Ce paramètre permet de modifier la vitesse de scroll.<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>1 : Vitesse de défilement douce</li>
+                                <li>2 : Vitesse de défilement normale</li>
+                                <li>3 : Vitesse de défilement rapide</li>
+                                
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> 2 (normal)</p>
+                    
+                </div>
+                
+                <div class="param">
+                    
+                    animate<br/>
+                        
+                        <p>Ce paramètre permet de rendre le déplacelement de la barre plus fluide en l'animant.
+                            Note : Impossible à reproduire lors d’un usage normal, mais lors d'un scroll rapide, intensif et long, on peut observer la création d’un léger décalage sur l'animation.<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>true : anime la barre</li>
+                                <li>false : n’anime pas la barre</li>
+                                
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> true</p>
+                    
+                </div>
+                
+                <div class="param">
+                    
+                    background<br/>
+                        
+                        <p>Ce paramètre permet d’afficher ou de masquer le fond de la barre<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>true : affiche le fond</li>
+                                <li>false : masque le fond</li>
+                                
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> false (fond masqué)</p>
+                    
+                </div>
+                
+                <div class="param">
+                    
+                    delayHideBar<br/>
+                        
+                        <p>Ce paramètre permet de modifier le délai de disparition de la barre dans le cas où autoHide vaut true<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>un nombre en millisecondes (ex : 1000 pour 1 seconde de délai)</li>
+                                  
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> 1000 (une seconde)</p>
+                    
+                </div>
+                
+                <div class="param">
+                    
+                    cssBar<br/>
+                        
+                        <p>Ce paramètre vous permet un paramètrage visuel de la barre plus poussé en ajoutant toutes 
+les propriétés CSS désirées <br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>Un tableau associatif contenant des propriétés CSS. Exemple : </li>
+                                
+                            </ul>
+                        
+                        <p class="shell">
+                        
+                            <span class="red">cssBar:</span> { background: <span class="yellow">‘blue’</span>, borderRadius: <span class="yellow">‘4px’</span>, border: <span class="yellow">‘1px solid #fff’</span> }
+
+                        </p>
+                        
+                        <p><b>Valeurs par défaut :</b> false</p>
+                    
+                </div>
+                
+                <div class="param">
+                    
+                   cssBg<br/>
+                        
+                        <p>Identique à cssBar, mais pour le fond de la barre (masqué par défaut).  Pour que les propriétés
+                        CSS soient prises en compte, vous devez au préalable afficher le fond avec le paramètre 
+                        background<br/>
+                            <b>Valeurs possibles</b> :</p>
+                        
+                            <ul>
+                            
+                                <li>Un tableau associatif contenant des propriétés CSS.</li>
+                                
+                            </ul>
+                        
+                        <p><b>Valeurs par défaut :</b> false</p>
+                    
+                </div>
+                
+             </div>
+            
+            
+            <div id="faq" class="el">
+                
+                <h1 class="title">FAQ</h1>
+                
+                <div class="faq">
+                    
+                    J’appelle mes pages en ajax avec différentes hauteurs / mes pages peuvent changer de hauteur en
+                    cours de route, est ce un problème ?
+                    
+                    <p>Bien sûr que non, le plug in va détecter automatiquement tout changement de résolution 
+                    verticale.</p>
+                    
+                </div>
+                
+                <div class="faq">
+                    
+                    J’utilise d’autres système / plugs-in en javascript qui (effectuent un scroll dans | qui déplace) la page, la barre ne rentrera pas en conflit ?
+                    
+                    <p>Non plus, la barre va s'animer normalement, aucun conflit n'aura lieu. Notez que le déplacement horizontal ne provoque aucune réaction de la barre.</p>
+                    
+                </div>
+                
+                <div class="faq">
+                    
+                    J’aimerais bien pouvoir l’utiliser sur mon site, en ai je le droit, et dois je citer l’auteur ?
+                    
+                    <p>Ce plug-in est sous license créative GNU GPL, ce qui signifie que :
+
+                        <span>- Vous pouvez l’utiliser dans un usage personnel ou commercial, sans avoir besoin de 
+                    citer l’auteur. (Mais un petit mail de remerciement fait toujours plaisir)<br/><br/>
+
+                    - Vous pouvez le redistribuer sous n'importe quelle forme.<br/><br/>
+
+                    - Vous êtes tout à fait autorisé à le modifier ou l’utiliser comme base de 
+                    développement mais devrez partager les modifications à la communautée. 
+                    Vous trouverez la version non minifiée et commentée <a href="smoothScroll-1.0.js">ici</a>.</span> </p>
+                    
+                </div>
+                
+            </div>
+            
+            
+            <div id="help" class="el">
+                
+                <h1 class="title">Aide et contact</h1>
+                
+                Pour toute question, si vous souhaitez voir un point ajouté à la FAC, que vous souhaitez me contacter
+                concernant le développement ou n’importe quoi d’autre, je vous invite à m’envoyer un mail directement
+                sur le formulaire du site ( <a href="http://adamsantoro.fr">http://adamsantoro.fr</a> )
+            </div>
+            
+        
+        </div>
+        
+        
+    </div>
+
+    <script type="text/javascript">
+        
+        (function ($) {
+            
+            $(window).smoothScroll({ autoHide: true, background: true, scrollSpeed: 2, delayHideBar: 1000, cssBar: {background: '#24282c url(\'images/pattern.png\') repeat'}});
+            
+            var h = document.documentElement.clientHeight, w = document.documentElement.clientWidth;
+
+            $('#bg').css({width: Math.round(w * 0.7)+'px', height: Math.round(h * 0.9)+'px', top: Math.round(h * 0.05)+'px', left: Math.round(w * 0.15)+'px'});
+            
+        })(jQuery);
+        
+        $(window).resize(function() {
+            
+            var h = document.documentElement.clientHeight, w = document.documentElement.clientWidth;
+
+            $('#bg').css({width: Math.round(w * 0.7)+'px', height: Math.round(h * 0.9)+'px', top: Math.round(h * 0.05)+'px', left: Math.round(w * 0.15)+'px'})
+            
+        })
+        
+    </script>
+    
+</body>
+</html>

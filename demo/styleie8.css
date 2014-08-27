@@ -1,0 +1,25 @@
+body {
+background: #475159;
+}
+
+#header .download, #header #title {
+    float: left;
+    text-align: center;
+	padding: 10px 0 0 0;
+	height: 49px;
+}
+
+#cloud, #power, #crossbro {
+    float: left;
+    font-family: 'MonotypeCorsiva', sans-serif;
+    font-size: 22px;
+    color: #616a72;
+    width: 130px;
+    height: 45px;
+    padding: 70px 0 0 0;
+    margin: 10px 0 0 60px;
+}
+
+#bg {
+    display: none;
+}
